@@ -117,6 +117,7 @@
           opacity: 0.75;
           color: white;
           border-top-left-radius: 5px;
+          padding-left: 8px;
         }
         .action-image-viewer-next-image {
           position:absolute;
@@ -132,6 +133,7 @@
           flex-direction: column;
           opacity: 0.75;
           color: white;
+          padding-left: 8px;
         }
         .action-image-viewer-close-viewer:hover,
         .action-image-viewer-prev-image:hover,
@@ -187,13 +189,13 @@
 
             </div>
             <div class="action-image-viewer-close-viewer">
-              <i class="fas fa-times"></i>
+              &times;
             </div>
-            <div class="action-image-viewer-prev-image" >
-              <i class="fas fa-chevron-left"></i>
+            <div class="action-image-viewer-prev-image">
+              <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 6L9 12L15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div class="action-image-viewer-next-image">
-              <i class="fas fa-chevron-right"></i>
+              <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
           </div>
           <div class="image-viewer-images">
@@ -272,6 +274,8 @@
         _this.currentVideoContainer.style.display = 'none';
       }
 
+      _this.imageViewerTitleContainer.innerHTML = image.getAttribute('title');
+
       image.scrollIntoViewIfNeeded(true);
     }
 
@@ -338,6 +342,11 @@
         let img = document.createElement('img');
         img.classList.add('image-viewer-image');
         img.setAttribute('src', image.url);
+        if (image.title) {
+          img.setAttribute('title', image.title);
+        } else {
+          img.setAttribute('title', params.title);
+        }
         if (image.video_url) {
           img.setAttribute('data-video-url', image.video_url);
         }

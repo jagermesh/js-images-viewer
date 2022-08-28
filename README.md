@@ -27,10 +27,11 @@ const images = [];
 images.push({
   url: 'url,
   video_url: 'url' // optional
+  title: 'title' // optionsl
 });
 imagesViewer.show(images, {
-  activeImage: 'url',
-  title: 'Wonderful images gallery'
+  activeImage: 'url', // optional
+  title: 'Wonderful images gallery' // optional
 });
 ~~~
 
