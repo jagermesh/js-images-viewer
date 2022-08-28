@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <h1>Image Viewer Demo</h1>
+
+    <div class="row">
+      <div class="col-md-4">
+<pre style="border:1px solid #666;right:10px;border-radius: 4px;font-size: 9pt;background-color: black;color:white;padding:10px;">
+&lt;script src="dist/images-viewer.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  /* global ImageViewer */
+  const imagesViewer = new ImagesViewer();
+  const images = [{
+    url: 'demo-files/DSCF4528.jpg',
+  }, {
+    url: 'demo-files/DSCF4529.jpg',
+    title: 'Plitvice Lakes - Custom Title',
+  }, {
+    url: 'demo-files/DSCF4530.jpg',
+  }, {
+    url: 'demo-files/DSCF4532.jpg',
+  }, {
+    url: 'demo-files/DSCF4533.jpg',
+  }, {
+    url: 'demo-files/DSCF4534.jpg',
+  }, {
+    url: 'demo-files/DSCF4535.jpg',
+  }, {
+    url: 'demo-files/DSCF4536.jpg',
+  }, {
+    url: 'demo-files/DSCF4537.jpg',
+  }, {
+    url: 'demo-files/DSCF4538.jpg',
+  }, {
+    url: 'demo-files/DSCF4539.jpg',
+  }, {
+    url: 'demo-files/DSCF4540.jpg',
+  }];
+  imagesViewer.show(images, {
+    title: 'Plitvice Lakes',
+  });
+&lt;/script&gt;
+</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="dist/images-viewer.min.js"></script>
+  <script>
+    /* global ImageViewer */
+    const imagesViewer = new ImagesViewer();
+    const images = [{
+      url: 'demo-files/DSCF4528.jpg',
+    }, {
+      url: 'demo-files/DSCF4529.jpg',
+      title: 'Plitvice Lakes - Custom Title',
+    }, {
+      url: 'demo-files/DSCF4530.jpg',
+    }, {
+      url: 'demo-files/DSCF4532.jpg',
+    }, {
+      url: 'demo-files/DSCF4533.jpg',
+    }, {
+      url: 'demo-files/DSCF4534.jpg',
+    }, {
+      url: 'demo-files/DSCF4535.jpg',
+    }, {
+      url: 'demo-files/DSCF4536.jpg',
+    }, {
+      url: 'demo-files/DSCF4537.jpg',
+    }, {
+      url: 'demo-files/DSCF4538.jpg',
+    }, {
+      url: 'demo-files/DSCF4539.jpg',
+    }, {
+      url: 'demo-files/DSCF4540.jpg',
+    }];
+    imagesViewer.show(images, {
+      title: 'Plitvice Lakes',
+    });
+  </script>
+</body>
+</html>
