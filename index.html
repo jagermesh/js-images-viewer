@@ -48,6 +48,9 @@
 &lt;/script&gt;
 </pre>
       </div>
+      <div class="col-md-4">
+        <button id="runImagesViewer">Run Images Viewer</button>
+      </div>
     </div>
   </div>
 
@@ -81,8 +84,11 @@
     }, {
       url: 'demo-files/DSCF4540.jpg',
     }];
-    imagesViewer.show(images, {
-      title: 'Plitvice Lakes',
+
+    document.getElementById('runImagesViewer').addEventListener('click', function() {
+      imagesViewer.show(images, {
+        title: 'Plitvice Lakes',
+      });
     });
   </script>
 </body>
